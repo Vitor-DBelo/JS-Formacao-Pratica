@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Cria um objeto JSON em formato de string
+var str = '{"names":[' +  
+'{"first":"Hakuna","lastN":"Matata" },' + 
+'{"first":"Jane","lastN":"Doe" },' + 
+'{"first":"Air","last":"Jordan" }]}';  
+
+// Converte a string JSON para um objeto JavaScript (parse)
+myObj = JSON.parse(str);  
+
+// Acessa o valor do segundo elemento do array "names" e exibe "Jane"
+document.write(myObj.names[1].first);  
+
+// Converte o objeto JavaScript de volta para uma string JSON (stringify)
+var myJSON = JSON.stringify(myObj);
+
+// Armazena a string JSON no armazenamento local (localStorage)
+localStorage.setItem("testJSON", myJSON);  
+
+// Recupera a string JSON armazenada no localStorage
+text = localStorage.getItem("testJSON");
+
+    </script>
+</body>
+</html>

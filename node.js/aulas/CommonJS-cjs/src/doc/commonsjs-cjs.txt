@@ -1,0 +1,13 @@
+CommonJS (CJS)
+
+é síncrono por padrão, ou seja, o código é executado linha por linha, de forma sequencial, enquanto as dependências são carregadas de forma síncrona. 
+Isso significa que, quando você utiliza require, o módulo é carregado e o código espera até que o carregamento esteja concluído antes de prosseguir. 
+_________________________________________________________________________________________________________________________________________________________
+
+amplamente utilizado em servidores Node.js, sendo a principal abordagem de módulos nesses ambientes.
+
+A sintaxe de CommonJS usa require para importar módulos e module.exports para exportá-los.
+_________________________________________________________________________________________________________________________________________________________
+
+O carregamento dinâmico significa que os módulos podem ser carregados a qualquer momento da execução, permitindo certa flexibilidade, 
+mas com o custo de um desempenho menor em alguns cenários.

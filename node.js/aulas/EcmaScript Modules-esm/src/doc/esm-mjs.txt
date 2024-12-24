@@ -1,0 +1,10 @@
+ESM (ECMAScript Modules)
+É assíncrono por padrão, o que significa que o carregamento dos módulos pode ocorrer sem bloquear a execução do restante do código.
+___________________________________________________________________________________________________________________________________
+
+suportado nativamente em navegadores e também no Node.js moderno.
+
+A sintaxe utiliza import para trazer funcionalidades de outros arquivos e export para disponibilizá-las.
+___________________________________________________________________________________________________________________________________
+
+ O carregamento estático permite que o código seja analisado antes da execução, melhorando a performance e ajudando ferramentas como bundlers e otimizações no tempo de execução.
