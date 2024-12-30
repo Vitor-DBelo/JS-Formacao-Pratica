@@ -1,0 +1,36 @@
+boas praticas
+_________
+    Use nomes curtos, descritivos e consistentes, como start, dev, build, test, lint, etc.
+Para scripts relacionados, use a convenção prefixo:ação, como test:watch ou lint:fix.
+_________
+    Use scripts que pertencem a uma mesma categoria (como testes, linting ou deploy) 
+devem seguir um padrão lógico para facilitar a leitura e manutenção.
+_________
+    Sempre teste e valide novos scripts em diferentes cenários para evitar falhas em produção.
+_________
+    Sempre que um script gerar arquivos (como build ou test:coverage),
+inclua um comando de limpeza, como clean, para evitar conflitos entre execuções.
+
+
+start: Inicia a aplicação.
+dev: Inicia o servidor de desenvolvimento com hot reloading.
+build: Constrói a aplicação para produção.
+
+test: Executa testes unitários.
+test:watch: Executa testes unitários em modo observação.
+test:coverage: Gera um relatório de cobertura de testes.
+
+lint: Analisa o código para garantir conformidade com padrões.
+lint:fix: Corrige erros de linting automaticamente.
+
+format: Formata o código de acordo com os padrões definidos.
+clean: Remove arquivos gerados.
+
+precommit: Executa linting, formatação e testes antes de confirmar o código.
+deploy: Faz o deploy da aplicação para um servidor.
+analyze: Analisa o tamanho do bundle ou o desempenho da aplicação.
+
+storybook: Inicia o Storybook para desenvolvimento de componentes.
+storybook:build: Constrói o Storybook para produção.
+storybook:deploy: Faz o deploy do Storybook para um serviço de hospedagem.
+

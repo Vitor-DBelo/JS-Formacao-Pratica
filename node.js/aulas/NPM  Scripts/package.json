@@ -1,0 +1,20 @@
+{
+  "name": "npm-scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "npm install",
+    "start:dev": "node src/index.js",
+    "start:watch": "node --watch src/index.js",
+
+
+
+    "rodar": "node src/index.js",
+    "dirComMain": "mkdir dir && cd dir && echo. > main.js && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
