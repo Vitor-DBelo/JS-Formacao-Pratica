@@ -1,0 +1,10 @@
+Para versões do Node.js abaixo da 20
+
+O dotenv é um pacote que permite carregar variáveis de ambiente de um arquivo .env para o 
+ambiente de execução do Node.js. Ele é útil para manter informações sensíveis, como chaves de API, 
+senhas de banco de dados e outras configurações, fora do código-fonte.
+
+O dotenv lê o arquivo .env e adiciona suas variáveis ao objeto process.env,
+que é acessível em toda a aplicação Node.js.
+
+import 'dotenv/config';
