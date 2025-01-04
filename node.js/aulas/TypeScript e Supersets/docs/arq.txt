@@ -1,0 +1,24 @@
+npm install -D typescript: para baixar o TypeScript como dependência de desenvolvimento no projeto.
+npx tsc: para traduzir arquivos TypeScript (.ts) para JavaScript (.js), usando o compilador do TypeScript.
+npx tsc --init: para criar o arquivo tsconfig.json e acessar as configurações do TypeScript no projeto.
+
+npm i tsx: para instalar o TSX, que permite executar arquivos TypeScript diretamente no Node.js.
+tsx arquivo.ts: para rodar um arquivo TypeScript (arquivo.ts) sem precisar compilar manualmente.
+
+
+
+
+npm i typescript tsx tsup: para instalar o TypeScript, TSX e TSUP no seu projeto.
+typescript: instala o compilador TypeScript.
+tsx: instala a ferramenta para executar arquivos TypeScript diretamente no Node.js.
+tsup: instala o empacotador (bundler) para compilar e empacotar seu código TypeScript de forma otimizada.
+'console.log('oi')' > src/index.ts: cria ou sobrescreve o arquivo index.ts na pasta src com o código
+console.log('oi'). Isso escreve o código no arquivo TypeScript.
+
+
+
+npm init -y typescript -D configura seu projeto com o padrão TypeScript e adiciona o TypeScript como dependência 
+de desenvolvimento.
+
+
+"dist": "npx tsc",
