@@ -1,0 +1,20 @@
+    API REST (ou API RESTful) é um tipo de interface de programação de aplicações (API) que segue os princípios da arquitetura REST.
+
+    A arquitetura REST é um estilo para projetar APIs que usa HTTP para comunicação entre cliente e servidor.
+Principais princípios:
+
+    Cliente-Servidor: Separação entre frontend e backend.
+    Stateless: Cada requisição é independente, sem armazenar estados no servidor.
+    Cacheável: Respostas podem ser armazenadas para melhorar desempenho.
+    Interface Uniforme: Uso de métodos HTTP (GET, POST, PUT, DELETE) e URLs para recursos.
+    Sistema em Camadas: Pode ter camadas intermediárias, como proxies e caches.
+    RESTful refere-se a APIs ou sistemas que seguem todos os princípios da arquitetura REST de forma consistente,
+    enquanto REST é apenas o estilo arquitetural teórico.
+
+Diferença entre REST e RESTful (com base na imagem):
+
+    Uma aplicação que resolve um problema de negócio, baseada em padrões de contrato, que segue algumas das 
+características do REST é considerada REST.
+
+    Uma aplicação que resolve um problema de negócio, baseada em padrões de contrato, que segue todas as 
+características do REST é considerada RESTful.
