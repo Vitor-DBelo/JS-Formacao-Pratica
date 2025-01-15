@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Retorna o número total de caracteres na string. -->
+
+    <!-- Retorna o segundo caractere da string. -->
+
+    <!-- Retorna o índice da primeira ocorrência da palavra ou caractere especificado. -->
+
+    <!-- Retorna o índice da última ocorrência do caractere especificado. -->
+
+    <!-- Retorna os últimos 4 caracteres da string. -->
+
+    <!-- Divide a string em até 3 palavras, usando o espaço como delimitador. -->
+
+    <!-- Converte todos os caracteres da string para maiúsculas. -->
+
+    <!-- Converte todos os caracteres da string para minúsculas. -->
+
+    <script>
+        const nome = 'Lorem ipsumdolor sit';
+        document.body.innerHTML = (`
+            seu nome ${nome} <br> 
+            seu nome tem ${nome.length} letras <br>
+            segunda letra do seu nome é (${nome[1]}) <br>
+            indice da primeira letra do su nome ${nome.indexOf('Lorem')}<br>
+            indeci da ultima letra do seu nome ${nome.lastIndexOf('t')}<br>
+            as ultimas 3 letras sao ${nome.slice(-4)}<br>
+            as palavras do seu nome sao ${nome.split(' ',3)}<br>
+            seu nome em maiusculo ${nome.toUpperCase()}<br>
+            seu nome em minuscula ${nome.toLowerCase()}<br>
+        `);
+    </script>
+</body>
+</html>
