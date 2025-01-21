@@ -1,0 +1,20 @@
+Instale o node 
+
+Para criar o projeto com Vite:
+````
+npm create vite@latest meu-projeto
+`````
+
+Para usar uma versão específica do Vite:
+`````
+npm create vite@5.5.2 .
+`````
+instale as dependências:
+`````
+npm install or npm i
+`````
+
+Para iniciar o servidor de desenvolvimento:
+`````
+npm run dev
+`````

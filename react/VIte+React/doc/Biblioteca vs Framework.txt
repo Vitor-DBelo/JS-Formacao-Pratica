@@ -1,0 +1,18 @@
+(biblioteca)é um conjunto de funções ou códigos prontos que você pode 
+usar em seu projeto. Ela serve para simplificar tarefas repetitivas ou
+complexas, como manipulação de dados, criação de interfaces ou comunicação 
+com bancos de dados. Quando você usa uma biblioteca, você tem a liberdade 
+de escolher como e quando usá-la no seu código, sem seguir regras
+rígidas.
+
+mais flexível, você escolhe quando e como usar.
+_____________________________________________________
+
+(framework)é um conjunto mais completo e estruturado, que define a "base" 
+do seu projeto e como ele deve funcionar. Ele fornece uma estrutura
+e regras que você deve seguir, o que pode ajudar a evitar erros, 
+já que o framework supervisiona o seu código. A vantagem é que ele facilita
+a organização e acelera o desenvolvimento, mas você tem menos liberdade
+para modificar certos aspectos do seu projeto.
+
+define regras que ajudam a evitar erros, mas oferece menos liberdade.

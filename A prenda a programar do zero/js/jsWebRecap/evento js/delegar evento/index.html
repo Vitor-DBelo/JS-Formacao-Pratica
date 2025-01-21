@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <button id="botao1">Botão 1</button>
+        <button id="botao2">Botão 2</button>
+        <button id="botao3">Botão 3</button>
+        <button id="botao4">Botão 4</button>
+    </div>
+
+    <script>
+        let content = document.getElementById('content');
+
+        content.addEventListener('click', (event) => {
+            if (event.target.tagName === 'BUTTON') {
+                // Pega o texto do botão
+                let botaoTexto = event.target.textContent;
+            
+                // Salva no localStorage
+                localStorage.setItem('botaoClicado', botaoTexto);
+            
+                // Muda a cor de fundo com base no botão clicado
+                switch (botaoTexto) {
+                    case 'Botão 1':
+                        document.body.style.backgroundColor = 'lightblue';
+                        break;
+                    case 'Botão 2':
+                        document.body.style.backgroundColor = 'lightgreen';
+                        break;
+                    case 'Botão 3':
+                        document.body.style.backgroundColor = 'lightyellow';
+                        break;
+                    case 'Botão 4':
+                        document.body.style.backgroundColor = 'lightcoral';
+                        break;
+                }
+            
+                // Muda a cor do botão clicado
+                event.target.style.backgroundColor = 'gray';
+            
+                // Exibe o nome do botão no alert
+                alert('Você clicou em: ' + botaoTexto);
+            }
+        });
+    </script>
+</body>
+</html>
