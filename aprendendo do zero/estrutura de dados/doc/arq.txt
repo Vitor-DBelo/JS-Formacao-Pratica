@@ -1,0 +1,128 @@
+Estruturas de Dados - Diferenças Principais
+==========================================
+
+Array
+------
+- Tamanho fixo, acessível por índice.
+- Armazena elementos do mesmo tipo.
+- Uso: Armazenamento de dados sequenciais e acesso rápido.
+
+List
+-----
+- Tamanho dinâmico, implementada como lista ligada.
+- Cada elemento aponta para o próximo.
+- Uso: Inserção/remoção eficiente no início ou meio.
+
+Matriz
+-------
+- Estrutura bidimensional (linhas e colunas).
+- Acessível por dois índices (linhas e colunas).
+- Uso: Representação de tabelas ou grids.
+
+Queue (Fila)
+-------------
+- Ordem FIFO (First In, First Out).
+- Inserção no final e remoção no início.
+- Uso: Processamento de tarefas em ordem de chegada.
+
+Record
+-------
+- Armazena dados de tipos diferentes em campos nomeados.
+- Similar a uma struct em outras linguagens.
+- Uso: Representação de objetos, como uma pessoa ou produto.
+
+Stack (Pilha)
+--------------
+- Ordem LIFO (Last In, First Out).
+- Inserção e remoção no topo.
+- Uso: Algoritmos de retrocesso (ex: chamadas de função).
+
+Tree (Árvore)
+--------------
+- Estrutura hierárquica com nós e arestas.
+- Cada nó pode ter filhos.
+- Uso: Organizações hierárquicas (ex: sistemas de arquivos).
+
+Tabela Hash
+------------
+- Mapeia chaves para valores via função de hash.
+- Acesso eficiente (O(1) idealmente).
+- Uso: Armazenamento de dados com chaves únicas.
+
+Grafo
+------
+- Conjunto de nós conectados por arestas.
+- Pode ser direcionado ou não, com ciclos.
+- Uso: Modelagem de redes e relações complexas.
+
+Principais Diferenças
+=====================
+- **Array vs List**: Array é fixo, List é dinâmica.
+- **Matriz vs Árvore**: Matriz é bidimensional, Árvore é hierárquica.
+- **Queue vs Stack**: Queue é FIFO, Stack é LIFO.
+- **Tabela Hash vs Grafo**: Tabela Hash mapeia chaves, Grafo modela relações entre nós.
+"""conteudo_resumido = """
+Estruturas de Dados - Diferenças Principais
+==========================================
+
+Array
+------
+- Tamanho fixo, acessível por índice.
+- Armazena elementos do mesmo tipo.
+- Uso: Armazenamento de dados sequenciais e acesso rápido.
+
+List
+-----
+- Tamanho dinâmico, implementada como lista ligada.
+- Cada elemento aponta para o próximo.
+- Uso: Inserção/remoção eficiente no início ou meio.
+
+Matriz
+-------
+- Estrutura bidimensional (linhas e colunas).
+- Acessível por dois índices (linhas e colunas).
+- Uso: Representação de tabelas ou grids.
+
+Queue (Fila)
+-------------
+- Ordem FIFO (First In, First Out).
+- Inserção no final e remoção no início.
+- Uso: Processamento de tarefas em ordem de chegada.
+
+Record
+-------
+- Armazena dados de tipos diferentes em campos nomeados.
+- Similar a uma struct em outras linguagens.
+- Uso: Representação de objetos, como uma pessoa ou produto.
+
+Stack (Pilha)
+--------------
+- Ordem LIFO (Last In, First Out).
+- Inserção e remoção no topo.
+- Uso: Algoritmos de retrocesso (ex: chamadas de função).
+
+Tree (Árvore)
+--------------
+- Estrutura hierárquica com nós e arestas.
+- Cada nó pode ter filhos.
+- Uso: Organizações hierárquicas (ex: sistemas de arquivos).
+
+Tabela Hash
+------------
+- Mapeia chaves para valores via função de hash.
+- Acesso eficiente (O(1) idealmente).
+- Uso: Armazenamento de dados com chaves únicas.
+
+Grafo
+------
+- Conjunto de nós conectados por arestas.
+- Pode ser direcionado ou não, com ciclos.
+- Uso: Modelagem de redes e relações complexas.
+
+Principais Diferenças
+=====================
+- **Array vs List**: Array é fixo, List é dinâmica.
+- **Matriz vs Árvore**: Matriz é bidimensional, Árvore é hierárquica.
+- **Queue vs Stack**: Queue é FIFO, Stack é LIFO.
+- **Tabela Hash vs Grafo**: Tabela Hash mapeia chaves, Grafo modela relações entre nós.
+"""
