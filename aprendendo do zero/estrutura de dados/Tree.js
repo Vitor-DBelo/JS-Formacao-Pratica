@@ -125,6 +125,19 @@ class Tree {
         console.log(tree.data); // Imprime o valor do nó
         this.inOrder(tree.right); // Chama recursivamente o filho à direita
     }
+
+    invertTree(tree){
+        if (tree === null) return null;
+
+        const temp = tree.left;
+        tree.left = tree.right;
+        tree.right = temp;
+
+        this.invertTree(tree.left);
+        this.invertTree(tree.right);
+
+        return tree
+    }
 }
 
 // Criando uma nova árvore binária
@@ -147,6 +160,10 @@ tree.postOrder(tree.root);
 console.log("Em ordem:");
 tree.inOrder(tree.root);
 console.log(tree.search(tree.root, 0));
+
+tree.invertTree(tree.root);
+console.log("Pré-ordem após inverter:");
+tree.postOrder(tree.root)
 
 // Tipos de Árvore Binária:
 // 1. **Árvore Binária Simples**:
