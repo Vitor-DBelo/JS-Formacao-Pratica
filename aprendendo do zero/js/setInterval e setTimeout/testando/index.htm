@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .time {
+            font-size: 3rem;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button#start {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button#pause {
+            background-color: #FF9800;
+            color: white;
+        }
+
+        button#reset {
+            background-color: #f44336;
+            color: white;
+        }
+
+        button#pause.paused {
+            background-color: #FF5722; /* Mudando a cor para vermelho escuro quando pausado */
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <main class="content">
+        <h1>Timer</h1>
+        <span class="time">00:00:00</span>
+        <div class="buttons">
+            <button id="start">Iniciar</button>
+            <button id="pause">Pausar</button>
+            <button id="reset">Zerar</button>
+        </div>
+    </main>
+        
+    <script>
+        const time = document.querySelector('.time');
+        let seconds = 0;
+        let timeOut;
+
+        const buttons = document.querySelector('.buttons');
+        buttons.addEventListener('click', (e) => {
+            let buttonId = e.target.id;
+            if(e.target.tagName === 'BUTTON'){
+               switch (e.target.id){
+                    case "start" :
+                        start();
+                        time.style.color = '#4CAF50';
+                        break
+                    case "pause":
+                        pause();
+                        time.style.color = '#FF5722';
+                        break
+                    case "reset":
+                        reset();
+                        time.style.color = '#f44336';
+                        break
+                    default:
+                        break
+               }
+            }
+        })
+
+
+        function start(){
+            if (!timeOut) { 
+                timeOut = setInterval(() => {
+                    seconds++;
+                    time.textContent = formatTime(seconds);
+                }, 1000);
+            }
+        }
+        function pause(){
+            setTimeout(() => {
+                clearInterval(timeOut);
+                timeOut = null;
+            },0);
+        }
+        function reset(){
+            clearInterval(timeOut);
+            timeOut = null;
+            seconds = 0; 
+            time.textContent = formatTime(seconds);
+        }
+
+        function formatTime(seconds){
+            let hours = Math.floor(seconds / 3600);
+            let minutes = Math.floor((seconds % 3600) / 60);
+            let secs = seconds % 60;
+
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+    </script>
+</body>
+</html>
