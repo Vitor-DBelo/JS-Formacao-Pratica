@@ -1,0 +1,65 @@
+WebSocket
+O que é WebSocket?
+  WebSocket é um protocolo de comunicação bidirecional que permite a troca contínua de dados entre cliente e servidor 
+  por meio de uma conexão persistente. Diferente do HTTP tradicional, que exige uma nova requisição para cada troca de 
+  informação, o WebSocket reduz a latência e melhora a eficiência da comunicação.
+
+  --Persistente 
+      uma vez que a conexão é estabelecida, ela permanece aberta por um período prolongado, permitindo a troca de dados
+      contínuos entre cliente e servidor.
+  --Bidirecional
+      permite que tanto o cliente quanto o servidor enviem e recebam mensagens de forma independente e simultânea, 
+      ou seja, qualquer parte pode iniciar a comunicação a qualquer momento, sem a necessidade de esperar pela outra.
+
+Como funciona?
+Estabelecimento da Conexão
+  O cliente envia uma requisição HTTP com cabeçalhos específicos para solicitar a atualização para o protocolo WebSocket.
+  O servidor aceita a atualização e responde com um cabeçalho de aceitação, estabelecendo a conexão.
+  A conexão permanece aberta, permitindo a troca de mensagens bidirecional sem a necessidade de novas requisições HTTP.
+  
+  
+
+O WebSocket utiliza os esquemas ws:// para conexões não seguras e wss:// para conexões seguras via TLS/SSL.
+
+_________________________________
+Comunicação baseada em eventos
+
+O WebSocket opera por meio de eventos assíncronos, permitindo que cliente e servidor enviem e recebam
+mensagens sem bloqueios:
+
+  onopen: Disparado quando a conexão é estabelecida.
+  onmessage: Disparado quando uma mensagem é recebida.
+  onclose: Disparado quando a conexão é encerrada.
+  onerror: Disparado em caso de erro na conexão.
+
+  .send(data): Envia uma mensagem para o servidor. 
+  .readyState: Retorna o estado da conexão
+      0: CONNECTING = A conexão está sendo estabelecida.
+      1: OPEN = A conexão foi aberta e está pronta para troca de dados.
+      2: CLOSING = A conexão está sendo encerrada.
+      3: CLOSED = A conexão foi fechada ou não pôde ser estabelecida.
+
+  .protocol:  Retorna o protocolo de subprotocolos utilizado na conexão, se houver.
+
+utilizados do lado do cliente
+_______________________________
+
+connection: Disparado quando um novo cliente se conecta.
+message: Disparado quando uma mensagem é recebida.
+close: Disparado quando a conexão é encerrada.
+error: Disparado quando ocorre um erro.
+
+.send(data): Envia dados ao cliente.
+.close(code, reason): Fecha a conexão.
+.ping() / .pong(): Mantém a conexão ativa.
+.terminate(): Encerra a conexão imediatamente.
+
+.readyState: Retorna o estado da conexão
+      0: CONNECTING = A conexão está sendo estabelecida.
+      1: OPEN = A conexão foi aberta e está pronta para troca de dados.
+      2: CLOSING = A conexão está sendo encerrada.
+      3: CLOSED = A conexão foi fechada ou não pôde ser estabelecida.
+
+.protocol: Retorna o protocolo de subprotocolos utilizado na conexão, se houver.
+
+utilizado no servidor 
