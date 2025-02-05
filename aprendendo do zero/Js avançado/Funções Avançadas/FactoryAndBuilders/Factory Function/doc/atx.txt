@@ -1,0 +1,26 @@
+Função Fábrica (Factory Function)
+
+Uma função fábrica é uma função que retorna um novo objeto a cada chamada.
+Ela é utilizada para criar instâncias de objetos de forma dinâmica,
+sem precisar usar a palavra-chave new ou depender de classes.
+
+Tudo que é gerado por uma função fábrica é chamado de produto, ou seja, cada objeto retornado é um produto dessa função.
+
+
+Quando usamos uma classe, precisamos utilizar new para criar um novo objeto.
+const pessoa1 = new Pessoa("João", 25);
+
+
+o mesmo resultado pode ser obtido chamando a função diretamente, sem new
+const pessoa1 = criarPessoa("João", 25);
+
+
+
+Vantagens das Funções Fábrica
+Simplicidade – Não exige o uso de new, tornando o código mais direto e intuitivo.
+
+Encapsulamento – Permite esconder detalhes internos dos objetos criados, melhorando a segurança e organização do código.
+
+Flexibilidade – Pode ser facilmente ajustada para retornar objetos diferentes dependendo dos parâmetros passados.
+Menos problemas com this – Em classes, esquecer de usar new pode causar erros.
+Com funções fábrica, esse problema não existe.

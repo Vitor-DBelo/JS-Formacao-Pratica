@@ -1,0 +1,19 @@
+Factory Method
+O Factory Method é um padrão de projeto criacional que delega a criação de objetos a subclasses, permitindo que elas decidam qual tipo de objeto instanciar. Isso desacopla a criação do objeto do código principal, tornando o sistema mais flexível e extensível.
+
+Como Funciona?
+Substitui a criação direta de objetos (new) por um método específico, chamado de "método fábrica".
+Esse método pode ser sobrescrito por subclasses para definir o tipo exato de objeto a ser criado.
+Os objetos criados compartilham uma interface ou classe base comum.
+Quando Usar?
+Quando o tipo exato do objeto a ser criado não é conhecido de antemão.
+Para facilitar a expansão do sistema sem modificar código existente.
+Quando há necessidade de reuso de objetos pesados (ex: conexões de banco de dados).
+Vantagens
+✅ Desacoplamento – A criação dos objetos não fica diretamente ligada ao código cliente.
+✅ Extensibilidade – Novos produtos podem ser adicionados sem alterar o código principal.
+✅ Reuso – Pode economizar recursos ao gerenciar a criação de objetos pesados.
+
+Desvantagens
+❌ Complexidade – Pode exigir várias subclasses, tornando o código mais difícil de gerenciar.
+❌ Hierarquia de classes – Depende de uma estrutura bem definida para ser eficiente.

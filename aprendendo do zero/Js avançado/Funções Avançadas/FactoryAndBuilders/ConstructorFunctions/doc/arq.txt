@@ -1,0 +1,21 @@
+Funções construtoras (constructor functions)
+A Função Construtora é uma forma de criar instâncias de objetos utilizando uma função como um molde. 
+Ela normalmente é usada com a palavra-chave new para instanciar o objeto.
+
+Ao utilizar uma função construtora, você define as propriedades e métodos que cada instância do objeto terá. 
+Ao contrário da função fábrica, que simplesmente retorna um objeto, a função construtora é utilizada para inicializar
+um objeto no contexto de uma instância.
+
+Diferença entre Função Construtora e Função Fábrica:
+
+Função Construtora: Cria objetos usando a palavra-chave new, e o this se refere à instância do objeto.
+
+Função Fábrica: Cria objetos sem usar new, retornando um novo objeto diretamente a cada chamada, o que torna o 
+código mais simples e evita erros com o uso do new.
+
+
+
+
+
+
+
