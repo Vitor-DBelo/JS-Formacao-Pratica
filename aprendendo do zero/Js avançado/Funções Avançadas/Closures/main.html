@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Closure</title>
+</head>
+<body>
+    <h1>Veja o Closure em ação!</h1>
+    <button id="botao">Clique para ver a mensagem</button>
+
+    <script>
+        function Retornafunc() {
+            const nome = 'luiz'; // variável 'nome' é criada aqui
+            return function() { // essa função interna será retornada
+                console.log('faaaaalaaa ' + nome); // ela usa a variável 'nome'
+            }
+        }
+
+        const funcRet = Retornafunc(); // chamamos a função Retornafunc, que retorna a função interna
+        console.log(funcRet()); // isso vai exibir 'faaaaalaaa luiz'
+
+        // Exibe a estrutura da função
+        const fafs = Retornafunc();
+        console.dir(fafs); // aqui vai mostrar a estrutura interna da função e seu acesso ao 'nome'
+
+        // Interação com o botão
+        document.getElementById('botao').addEventListener('click', function() {
+            funcRet(); // Quando clicar, vai chamar a função e exibir a mensagem
+        });
+    </script>
+</body>
+</html>

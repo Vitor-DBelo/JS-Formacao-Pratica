@@ -1,0 +1,19 @@
+O que é Escopo Léxico?
+Escopo léxico refere-se à forma como as funções em JavaScript têm acesso às variáveis do seu escopo (bloco de código)
+definido durante a escrita do código, e não quando o código é executado.
+
+Em outras palavras, quando você escreve uma função, as variáveis que ela pode acessar são determinadas pelo 
+local onde a função foi definida, não onde ela foi chamada. O termo lexical vem de "leitura do código", já que o 
+acesso às variáveis é baseado na forma como o código foi escrito.
+
+Isso significa que uma função sempre terá acesso às variáveis que estão no seu escopo no momento em que foi criada
+(não no momento em que é executada).
+
+Por que isso é importante?
+O escopo léxico permite que funções internas se "lembrem" de seu escopo original, 
+o que é útil para várias coisas, como:
+
+Encapsulamento: Você pode criar funções com variáveis privadas que não podem ser acessadas de fora da função, 
+mas que ainda podem ser usadas pela função interna.
+Funções de retorno: Como no exemplo que mostrei, você pode criar funções dentro de outras e retornar essas funções, 
+mantendo o acesso às variáveis do escopo onde elas foram definidas.
