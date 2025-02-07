@@ -1,0 +1,115 @@
+<!--Este horizontal scroll é de tamanho fixo-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Controlado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+
+        .section-one {
+            width: 100%;
+            height: 100vh;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section-two {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(13, 66, 66);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .pin-wrap {
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .pin-wrap-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #horizontal-scroll-container {
+            display: flex;
+            position: relative;
+            width: 350vw;
+            height: 100vh;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .scrollable-section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .scrollable-section:nth-child(1) { background-color: #1a237e; }
+        .scrollable-section:nth-child(2) { background-color: #0d47a1; }
+        .scrollable-section:nth-child(3) { background-color: #01579b; }
+.scrollable-section:nth-child(4) { background-color: #404f5b; }
+        .pin-wrap-container {
+            height: 300vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one">Scroll Down ↓</section>
+    
+    <div class="pin-wrap-container">
+        <div class="pin-wrap-sticky">
+            <div class="pin-wrap">
+                <div id="horizontal-scroll-container">
+                    <section class="scrollable-section">Seção 1</section>
+                    <section class="scrollable-section">Seção 2</section>
+                    <section class="scrollable-section">Seção 3</section>
+                    <section class="scrollable-section">Seção 4</section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-two">Final da página</section>
+    
+    <script>
+        const horizontalScrollContainer = document.querySelector('#horizontal-scroll-container');
+        const pinWrapContainer = document.querySelector('.pin-wrap-container');
+        
+        window.addEventListener('scroll', () => {
+            const pinWrapRect = pinWrapContainer.getBoundingClientRect();
+            const scrollPercentage = pinWrapRect.top / (pinWrapRect.height - window.innerHeight);
+            const moveDistance = Math.min(0, Math.max(-300, scrollPercentage * 350));
+            
+            horizontalScrollContainer.style.transform = `translate3d(${moveDistance}vw, 0, 0)`;
+        });
+    </script>
+</body>
+</html>

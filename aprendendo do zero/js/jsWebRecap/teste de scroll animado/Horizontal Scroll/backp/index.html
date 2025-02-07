@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Controlado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #horizontal-scroll-container {
+            background-color: aqua;
+            height: 113vh;
+            display: flex;
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+
+        }
+
+        #horizontal-scroll-container .scrollable-section {
+            min-width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        #horizontal-scroll-container .scrollable-section:nth-child(1) { background-color: blue; }
+        #horizontal-scroll-container .scrollable-section:nth-child(2) { background-color: rgb(0, 0, 127); }
+        #horizontal-scroll-container .scrollable-section:nth-child(3) { background-color: rgb(87, 87, 226); }
+    </style>
+</head>
+<body>
+    <section id="horizontal-scroll-container">
+        <section class="scrollable-section">1</section>
+        <section class="scrollable-section">2</section>
+        <section class="scrollable-section">3</section>
+        <section class="scrollable-section">4</section>
+    </section>
+    <script>
+
+        function Scroll() {
+            const horizontalScrollContainer = document.getElementById('horizontal-scroll-container');
+
+            horizontalScrollContainer.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                horizontalScrollContainer.scrollLeft += e.deltaY;
+            });
+        }
+        Scroll();
+    </script>
+</body>
+</html>

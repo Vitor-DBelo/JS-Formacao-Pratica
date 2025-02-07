@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divs Diferentes Centralizadas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+  <div class="ToggleSwitch">
+    <input type="checkbox" id="chk">
+    <label for="chk" class="Shit">
+      <span class="slid"></span>
+    </label>
+  </div>
+  <section>
+    <div class="container container-1">
+      <h1>Div Amarela</h1>
+      <p>Essa é a div amarela, com um tamanho médio e um visual bem vibrante. Curte aí!</p>
+    </div>
+  </section>
+  <section>
+    <div class="container container-2">
+      <h1>Div Azul</h1>
+      <p>Agora, essa div azul é um pouco menor, mas igualmente estilosa. Tá massa, né?</p>
+    </div>
+  </section>
+  <section>
+    <div class="container container-3">
+      <h1>Div Roxa</h1>
+      <p>Olha só essa div roxa, compacta e cheia de personalidade. É nóis!</p>
+    </div>
+  </section>
+  <section>
+    <div class="container container-4">
+      <h1>Div Rosa</h1>
+      <p>Essa div rosa tem um visual mais chamativo e ocupa mais espaço. Demais, mano!</p>
+    </div>
+  </section>
+  <section>
+    <div class="container container-5">
+      <h1>Div Verde</h1>
+      <p>Por fim, essa div verde é a menor do rolê, mas não deixa de ser estilosa. Top demais!</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkbox = document.querySelector('#chk');
+
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        checkbox.checked = true;
+      }
+
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

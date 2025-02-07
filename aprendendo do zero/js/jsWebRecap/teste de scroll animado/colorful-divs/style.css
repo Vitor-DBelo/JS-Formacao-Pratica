@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 100vh;
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .container-1 {
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--color-yellow);
+  }
+
+  .container-2 {
+    width: 70%;
+    max-width: 500px;
+    background-color: var(--color-blue);
+  }
+
+  .container-3 {
+    width: 60%;
+    max-width: 400px;
+    background-color: var(--color-purple);
+  }
+
+  .container-4 {
+    width: 90%;
+    max-width: 700px;
+    background-color: var(--color-pink);
+  }
+
+  .container-5 {
+    width: 50%;
+    max-width: 350px;
+    background-color: var(--color-green);
+  }
+
+  h1 {
+    font-size: 24px;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-light);
+    text-align: center;
+  }
+
+  .ToggleSwitch {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 95%;
+    margin-top: 20px;
+  }
+
+  #chk {
+    display: none;
+  }
+
+  .Shit {
+    position: relative;
+    background-color: var(--text-light);
+    width: 50px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .slid {
+    background-color: var(--bg-light);
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: all .5s ease-in-out;
+    left: 5px;
+  }

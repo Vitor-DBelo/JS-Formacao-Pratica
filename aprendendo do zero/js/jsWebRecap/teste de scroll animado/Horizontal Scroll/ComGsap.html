@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Horizontal com GSAP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Esconde a barra de rolagem horizontal padrão */
+        }
+
+        .slider {
+            display: flex;
+            width: fit-content; /* Largura total das seções */
+        }
+
+        .secao {
+            width: 100vw; /* Largura de cada seção igual à largura da tela */
+            height: 100vh; /* Altura de cada seção igual à altura da tela */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white; /* Cor do texto */
+        }
+
+
+        section{
+            width: 100%;
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            background-color: #151515;
+            color: aliceblue;
+        }
+        h1{
+            font-size: 3em;
+        }
+        h2{
+            font-size: 2.5em; color: #151515;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Scroll Horizontal</h1>
+    </section>
+    <div class="slider">
+        <div class="secao"><h2 >Começa aqui</h2></div>
+        <div class="secao"><h2 >sessão 1</h2></div>
+        <div class="secao"><h2 >sessão 2</h2></div>
+        <div class="secao"><h2 >Csessão 3</h2></div>
+        <div class="secao"><h2 >Csessão 4</h2></div>
+    </div>
+    <section>
+        <h1>Final</h1>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        function iniciarGsap(){
+            let telaAtual = window.innerWidth;
+
+            let slider = document.querySelector(".slider");
+            let sections = gsap.utils.toArray(".secao");
+
+            ScrollTrigger.killAll(); // Importante para evitar conflitos com resize
+
+            let sliderTl = gsap.timeline({
+                defaults: {
+                    ease: "none"
+                },
+                scrollTrigger:{
+                    trigger: slider,
+                    pin: true,
+                    scrub: 2,
+                    end: () => {
+                        if(telaAtual > 1024){
+                            return "+=" + (slider.offsetWidth * .3);
+                        }else{
+                            return "+=" + (slider.offsetWidth * .8);
+                        }
+                    },
+                    // markers: true // Para visualizar os triggers (opcional)
+                }
+            });
+
+            sliderTl.to(slider, {
+                x: ((sections.length - 1) * -100) + "vw"
+            });
+        }
+
+        addEventListener("DOMContentLoaded", iniciarGsap);
+
+        window.addEventListener('resize', function() {
+            // Recarrega a página sem cache para evitar bugs no scroll
+            window.location.href = window.location.href.split('?')[0] + '?v=' + Date.now();
+        });
+    </script>
+
+</body>
+</html>

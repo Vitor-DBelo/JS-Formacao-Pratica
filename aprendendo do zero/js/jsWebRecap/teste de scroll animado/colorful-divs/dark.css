@@ -1,0 +1,53 @@
+:root {
+    --color-yellow: #fbc02d;
+    --color-blue: #81d4fa;
+    --color-purple: #9575cd;
+    --color-pink: #f06292;
+    --color-green: #80e27e;
+    
+    --color-yellow-dark: #c17900;
+    --color-blue-dark: #4b8b9a;
+    --color-purple-dark: #6c4b8c;
+    --color-pink-dark: #c04f7c;
+    --color-green-dark: #5d9144;
+    
+    --container5-bg-dark: #4caf50;
+    --text-light: #000000;
+    --bg-dark: #121212;
+    --bg-light: #ffffff;
+    --text-dark: #000000;     
+  }
+
+  
+  #chk:checked ~ .Shit {
+    background-color: var(--color-purple);
+  }
+
+  #chk:checked ~ .Shit .slid {
+    transform: translateX(30px);
+  } 
+
+  body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  body.dark-mode .container-1 {
+    background-color: var(--color-yellow-dark);
+  }
+
+  body.dark-mode .container-2 {
+    background-color: var(--color-blue-dark);
+  }
+
+  body.dark-mode .container-3 {
+    background-color: var(--color-purple-dark);
+  }
+
+  body.dark-mode .container-4 {
+    background-color: var(--color-pink-dark);
+  }
+
+  body.dark-mode .container-5 {
+    background-color: var(--color-green-dark);
+  }
