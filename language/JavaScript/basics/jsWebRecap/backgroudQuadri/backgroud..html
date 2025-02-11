@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
+<html lang="en"> <!-- Define que o idioma da página é inglês -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, que é a mais comum e suporta diversos idiomas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, ajustando o layout para diferentes larguras de tela -->
+    <title>Document</title> <!-- Define o título da página, que aparece na aba do navegador -->
+    <style>
+        /* Estilos CSS dentro da tag <style> para estilizar o corpo da página */
+        body{
+            background-color: black; /* Define o fundo da página como preto */
+            
+            /* Aplica dois gradientes para criar uma grade de linhas finas */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.288), transparent 1px), /* Gradiente de cima para baixo (branco para transparente) */
+                linear-gradient(90deg,rgba(255, 255, 255, 0.288),transparent 1px); /* Gradiente de esquerda para direita (branco para transparente) */
+            
+            background-size: 50px 50px; /* Define o tamanho da grade de gradientes, formando quadrados de 50px */
+            
+            height: 100vh; /* Define a altura da página como 100% da altura da janela do navegador (tela cheia) */
+            margin: 0; /* Remove a margem padrão do navegador ao redor da página */
+            padding: 0; /* Remove o padding (espaçamento interno) do corpo da página */
+        }
+
+        /* Pseudo-elemento ::after, que é um elemento invisível adicionado após o conteúdo do body */
+        body::after {
+            content: ""; /* Cria um conteúdo vazio (não visível) para o pseudo-elemento */
+            position: absolute; /* Posiciona o pseudo-elemento de forma absoluta em relação ao body */
+            bottom: 0; /* Alinha o pseudo-elemento à parte inferior da página */
+            right: 0; /* Alinha o pseudo-elemento à parte direita da página */
+            width: 100%; /* O pseudo-elemento ocupará 100% da largura do body */
+            height: 100%; /* O pseudo-elemento ocupará 100% da altura do body */
+            
+            /* Aplica um gradiente diagonal no pseudo-elemento, indo de preto para transparente */
+            background: linear-gradient(to top left, black 50%, transparent 900%);
+            
+            pointer-events: none; /* Impede que o pseudo-elemento interfira em interações de clique ou mouse (ex: não bloqueia botões) */
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+
+    </section>
+</body>
+</html>
