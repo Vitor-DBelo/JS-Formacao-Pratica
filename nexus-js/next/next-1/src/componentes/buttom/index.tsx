@@ -7,6 +7,7 @@ export function Buttom(){
 
     function hendleName(){
         setNome('cleid')
+        console.log('altera')
     }
 
     return(
